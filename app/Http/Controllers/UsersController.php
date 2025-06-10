@@ -42,7 +42,7 @@ class UsersController extends Controller
     public function followings($id)
     {
         // idの値でユーザーを検索して取得
-        $user = User::findOrfail($id);
+        $user = User::findOrFail($id);
 
         // 関係するモデルの件数をロード
         $user->loadRelationshipCounts();
@@ -61,7 +61,7 @@ class UsersController extends Controller
     public function followers($id)
     {
         // idの値でユーザーを検索して取得
-        $user = User::findOrfail($id);
+        $user = User::findOrFail($id);
 
         // 関係するモデルの件数をロード
         $user->loadRelationshipCounts();
