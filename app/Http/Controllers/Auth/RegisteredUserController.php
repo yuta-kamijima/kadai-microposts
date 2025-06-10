@@ -34,7 +34,17 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+            ], [
+                'name.required' => '名前は必須です',
+                'name.max' => '名前は255字以内で入力してください',
+                'email.required' => 'メールアドレスは必須です',
+                'email.email' => '有効なメールアドレスを入力してください',
+                'email.max' => 'メールアドレスは255字以内で入力してください',
+                'email.unique' => 'このメールアドレスは既に登録されています',
+                'password.required' => 'パスワードは必須です',
+                'password.confirmed' => 'パスワードが一致しません',
+            ]
+        );
 
         $user = User::create([
             'name' => $request->name,
