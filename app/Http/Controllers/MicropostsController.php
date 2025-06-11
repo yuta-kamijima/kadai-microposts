@@ -32,6 +32,9 @@ class MicropostsController extends Controller
         // バリデーション
         $request->validate([
             'content' => 'required|max:255',
+        ], [
+            'content.required' => '入力は必須です',
+            'content.max' => '255字以内で入力してください',
         ]);
 
         // 認証済みユーザーの投稿として作成
