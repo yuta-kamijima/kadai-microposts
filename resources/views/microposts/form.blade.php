@@ -4,7 +4,7 @@
             @csrf
 
             <div class="form-control mt-4">
-                <textarea rows="2" name="content" class="input input-bordered w-full"></textarea>
+                <textarea rows="2" name="content" class="input input-bordered w-full" placeholder="255字以内で入力してください"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-block normal-case">Post</button>

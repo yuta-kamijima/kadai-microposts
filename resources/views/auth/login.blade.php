@@ -14,14 +14,14 @@
                 <label for="email" class="label">
                     <span class="label-text">Email</span>
                 </label>
-                <input type="email" name="email" class="input input-bordered w-full">
+                <input type="email" name="email" class="input input-bordered w-full" placeholder="必須">
             </div>
 
             <div class="form-control my-4">
                 <label for="password" class="label">
                     <span class="label-text">Password</span>
                 </label>
-                <input type="password" name="password" class="input input-bordered w-full">
+                <input type="password" name="password" class="input input-bordered w-full" placeholder="必須">
             </div>
 
             <button type="submit" class="btn btn-primary btn-block normal-case">Log in</button>

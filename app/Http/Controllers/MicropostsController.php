@@ -33,7 +33,7 @@ class MicropostsController extends Controller
         $request->validate([
             'content' => 'required|max:255',
         ], [
-            'content.required' => '入力は必須です',
+            'content.required' => '入力してください',
             'content.max' => '255字以内で入力してください',
         ]);
 
